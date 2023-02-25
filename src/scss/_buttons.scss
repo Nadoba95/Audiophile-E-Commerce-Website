@@ -1,0 +1,45 @@
+%button {
+  font-family: $manrope-family;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: $hover-transition;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn {
+  @extend %button;
+}
+
+%big-button {
+  @extend %button;
+  width: 160px;
+  height: 48px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+}
+
+.primary-button {
+  @extend %big-button;
+  background-color: $dark-orange;
+  color: $white;
+
+  &:hover {
+    background-color: $light-orange;
+  }
+}
+
+.secondary-button {
+  @extend %big-button;
+  color: $black;
+  border: 1px solid $black;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+}

@@ -1,0 +1,49 @@
+.hero {
+  background-color: #191919;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+  bottom: 96px;
+  margin-bottom: -96px;
+}
+
+.hero__container {
+  width: clamp(200px, 100%, 1110px);
+  background-image: url("../../assets/home/desktop/image-hero.jpg");
+  min-height: 729px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.hero__card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 225px;
+}
+
+.hero__overline {
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 10px;
+  opacity: 0.5;
+  margin-bottom: 24px;
+}
+
+.hero__title {
+  max-width: 396px;
+  font-size: 56px;
+  line-height: 58px;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.hero__description {
+  max-width: 349px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  opacity: 0.75;
+  margin-bottom: 40px;
+}
