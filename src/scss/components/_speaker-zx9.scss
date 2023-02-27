@@ -1,0 +1,60 @@
+.speaker-zx9 {
+  padding: 50px 20px 0 20px;
+  margin-bottom: 50px;
+}
+
+.speaker-zx9__container {
+  width: clamp(200px, 100%, 1110px);
+  min-height: 560px;
+  background-color: $dark-orange;
+  border-radius: 8px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.speaker-zx9__circles-icon {
+  position: absolute;
+  transform: translate(-120px, -20px);
+}
+
+.speaker-zx9__box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  z-index: 1;
+}
+
+.speaker-zx9__img {
+  height: 493px;
+  position: relative;
+  top: 80px;
+}
+
+.speaker-zx9__card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 80px;
+  top: 25px;
+}
+
+.speaker-zx9__title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  max-width: 261px;
+}
+
+.speaker-zx9__description {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  opacity: 0.75;
+  margin-bottom: 40px;
+  max-width: 349px;
+}

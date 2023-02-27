@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-const logo: string = require("../assets/shared/desktop/logo.svg").default;
-const cart: string = require("../assets/shared/desktop/icon-cart.svg").default;
+const logo: string = require("../../assets/shared/desktop/logo.svg").default;
+const cart: string = require("../../assets/shared/desktop/icon-cart.svg").default;
 
 const Header: React.FC = () => {
   return (

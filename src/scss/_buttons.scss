@@ -21,6 +21,7 @@
   line-height: 18px;
   letter-spacing: 1px;
   padding: 15px 30px;
+  white-space: nowrap;
 }
 
 .primary-button {
@@ -41,5 +42,15 @@
   &:hover {
     background-color: $black;
     color: $white;
+  }
+}
+
+.black-button {
+  @extend %big-button;
+  background-color: $black;
+  color: $white;
+
+  &:hover {
+    background-color: #4c4c4c;
   }
 }
