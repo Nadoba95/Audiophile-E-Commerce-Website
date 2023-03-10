@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
-
-const logo: string = require("../../assets/shared/desktop/logo.svg").default;
-const cart: string = require("../../assets/shared/desktop/icon-cart.svg").default;
+import CartIcon from "../icons/CartIcon";
+import LogoIcon from "../icons/LogoIcon";
 
 const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header__container">
-        <img className="header__logo" src={logo} alt="logo" />
+        <LogoIcon />
         <nav className="header__nav">
           <ul className="header__list">
             <li>
@@ -33,7 +32,7 @@ const Header: React.FC = () => {
           </ul>
         </nav>
         <button className="btn" type="button">
-          <img className="header__cart" src={cart} alt="cart" />
+          <CartIcon />
         </button>
       </div>
     </header>

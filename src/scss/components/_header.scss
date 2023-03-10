@@ -15,11 +15,6 @@
   z-index: 99;
 }
 
-.header__logo {
-  width: 145px;
-  height: 25px;
-}
-
 .header__list {
   list-style: none;
   display: flex;
@@ -33,9 +28,4 @@
   &:hover {
     color: $light-orange;
   }
-}
-
-.header__cart {
-  width: 24px;
-  height: 20px;
 }

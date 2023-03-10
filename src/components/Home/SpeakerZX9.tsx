@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
+import CirclesIcon from "../icons/CirclesIcon";
 
-const circlesIcon: string = require("../../assets/home/desktop/pattern-circles.svg").default;
 const speakerImg: string = require("../../assets/home/desktop/image-speaker-zx9.png");
 
 const SpeakerZX9: React.FC = () => {
   return (
     <section className="speaker-zx9">
       <div className="speaker-zx9__container">
-        <img className="speaker-zx9__circles-icon" src={circlesIcon} alt="circles" />
+        <CirclesIcon />
         <div className="speaker-zx9__box">
           <img className="speaker-zx9__img" src={speakerImg} alt="speaker" />
           <div className="speaker-zx9__card">
