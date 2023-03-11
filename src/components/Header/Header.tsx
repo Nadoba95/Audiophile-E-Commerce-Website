@@ -1,36 +1,48 @@
 import { Link } from "react-router-dom";
-import CartIcon from "../icons/CartIcon";
-import LogoIcon from "../icons/LogoIcon";
+import CartIcon from "../Icons/CartIcon";
+import HamburgerIcon from "../Icons/HamburgerIcon";
+import LogoIcon from "../Icons/LogoIcon";
 
 const Header: React.FC = () => {
+  const tablet = window.innerWidth <= 1199;
+
   return (
     <header className="header">
       <div className="header__container">
-        <LogoIcon />
-        <nav className="header__nav">
-          <ul className="header__list">
-            <li>
-              <Link className="btn header__link" to="/">
-                HOME
-              </Link>
-            </li>
-            <li>
-              <Link className="btn header__link" to="/">
-                HEADPHONES
-              </Link>
-            </li>
-            <li>
-              <Link className="btn header__link" to="/">
-                SPEAKERS
-              </Link>
-            </li>
-            <li>
-              <Link className="btn header__link" to="/">
-                EARPHONES
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="header__box">
+          {tablet && (
+            <button className="btn header__menu-btn">
+              <HamburgerIcon />
+            </button>
+          )}
+          <LogoIcon />
+        </div>
+        {!tablet && (
+          <nav className="header__nav">
+            <ul className="header__list">
+              <li>
+                <Link className="btn header__link" to="/">
+                  HOME
+                </Link>
+              </li>
+              <li>
+                <Link className="btn header__link" to="/">
+                  HEADPHONES
+                </Link>
+              </li>
+              <li>
+                <Link className="btn header__link" to="/">
+                  SPEAKERS
+                </Link>
+              </li>
+              <li>
+                <Link className="btn header__link" to="/">
+                  EARPHONES
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        )}
         <button className="btn" type="button">
           <CartIcon />
         </button>

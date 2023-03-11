@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ArrowRightIcon from "../icons/ArrowRightIcon";
+import ArrowRightIcon from "../Icons/ArrowRightIcon";
 
 const headphonesImg: string = require("../../assets/shared/desktop/image-category-thumbnail-headphones.png");
 const speakersImg: string = require("../../assets/shared/desktop/image-category-thumbnail-speakers.png");
@@ -18,7 +18,7 @@ const Categories: React.FC = () => {
       </Link>
       <Link className="btn categories__card" to="/">
         <img className="categories__img" src={speakersImg} alt="speakers" />
-        <h2 className="categories__title"> SPEAKERS</h2>
+        <h2 className="categories__title">SPEAKERS</h2>
         <div className="categories__link">
           Shop
           <ArrowRightIcon />

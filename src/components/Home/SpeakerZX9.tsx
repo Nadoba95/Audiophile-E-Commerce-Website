@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import CirclesIcon from "../icons/CirclesIcon";
+import CirclesIcon from "../Icons/CirclesIcon";
 
 const speakerImg: string = require("../../assets/home/desktop/image-speaker-zx9.png");
 

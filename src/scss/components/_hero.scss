@@ -5,6 +5,11 @@
   z-index: 1;
   bottom: 96px;
   margin-bottom: -96px;
+
+  @include breakpoint($tablet) {
+    bottom: 80px;
+    margin-bottom: 80px;
+  }
 }
 
 .hero__container {
@@ -15,12 +20,25 @@
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
+
+  @include breakpoint($tablet) {
+    background-image: url("../../assets/home/tablet/image-header.jpg");
+    position: relative;
+  }
 }
 
 .hero__card {
   display: flex;
   flex-direction: column;
   padding-top: 225px;
+
+  @include breakpoint($tablet) {
+    position: absolute;
+    top: 125;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+  }
 }
 
 .hero__overline {
@@ -33,6 +51,7 @@
 
 .hero__title {
   max-width: 396px;
+  font-weight: 700;
   font-size: 56px;
   line-height: 58px;
   letter-spacing: 2px;
@@ -46,4 +65,8 @@
   line-height: 25px;
   opacity: 0.75;
   margin-bottom: 40px;
+
+  @include breakpoint($tablet) {
+    text-align: center;
+  }
 }
