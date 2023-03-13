@@ -1,6 +1,11 @@
 .speaker-zx9 {
   padding: 50px 20px 0 20px;
   margin-bottom: 50px;
+
+  @include breakpoint($tablet) {
+    padding: 0 40px;
+    margin-bottom: 32px;
+  }
 }
 
 .speaker-zx9__container {
@@ -11,11 +16,20 @@
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+
+  @include breakpoint($tablet) {
+    min-height: 720px;
+  }
 }
 
 .speaker-zx9__circles-icon {
   position: absolute;
   transform: translate(-120px, -20px);
+
+  @include breakpoint($tablet) {
+    transform: translate(-50%, -35%);
+    left: 50%;
+  }
 }
 
 .speaker-zx9__box {
@@ -25,12 +39,23 @@
   justify-content: center;
   gap: 55px;
   z-index: 1;
+
+  @include breakpoint($tablet) {
+    flex-direction: column;
+    gap: 64px;
+  }
 }
 
 .speaker-zx9__img {
   height: 493px;
   position: relative;
   top: 80px;
+
+  @include breakpoint($tablet) {
+    height: 237px;
+    position: static;
+    padding-top: 52px;
+  }
 }
 
 .speaker-zx9__card {
@@ -39,6 +64,12 @@
   position: relative;
   left: 80px;
   top: 25px;
+
+  @include breakpoint($tablet) {
+    position: static;
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .speaker-zx9__title {

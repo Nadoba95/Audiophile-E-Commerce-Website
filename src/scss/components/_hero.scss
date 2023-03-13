@@ -6,9 +6,9 @@
   bottom: 96px;
   margin-bottom: -96px;
 
-  @include breakpoint($tablet) {
-    bottom: 80px;
-    margin-bottom: 80px;
+  @include breakpoint($mobile) {
+    padding: 0;
+    background-color: #1a1a1a;
   }
 }
 
@@ -23,7 +23,16 @@
 
   @include breakpoint($tablet) {
     background-image: url("../../assets/home/tablet/image-header.jpg");
+    background-size: auto 100%;
     position: relative;
+  }
+
+  @include breakpoint($mobile) {
+    background-image: url("../../assets/home/mobile/image-header.jpg");
+    min-height: 600px;
+    padding: 0 20px;
+    background-size: cover;
+    max-width: 400px;
   }
 }
 
@@ -34,10 +43,15 @@
 
   @include breakpoint($tablet) {
     position: absolute;
-    top: 125;
     left: 50%;
     transform: translateX(-50%);
     align-items: center;
+    text-align: center;
+    padding-top: 215px;
+  }
+
+  @include breakpoint($mobile) {
+    padding-top: 200px;
   }
 }
 
@@ -47,6 +61,10 @@
   letter-spacing: 10px;
   opacity: 0.5;
   margin-bottom: 24px;
+
+  @include breakpoint($mobile) {
+    margin-bottom: 16px;
+  }
 }
 
 .hero__title {
@@ -56,6 +74,13 @@
   line-height: 58px;
   letter-spacing: 2px;
   margin-bottom: 24px;
+
+  @include breakpoint($mobile) {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 1.3px;
+  }
 }
 
 .hero__description {
@@ -66,7 +91,8 @@
   opacity: 0.75;
   margin-bottom: 40px;
 
-  @include breakpoint($tablet) {
-    text-align: center;
+  @include breakpoint($mobile) {
+    margin-bottom: 28px;
+    font-size: 13px;
   }
 }

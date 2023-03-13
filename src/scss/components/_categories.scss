@@ -3,7 +3,18 @@
   gap: 30px;
   align-items: center;
   justify-content: center;
-  padding: 120px 20px;
+  padding: 200px 20px 120px 20px;
+
+  @include breakpoint($tablet) {
+    gap: 10px;
+    padding: 150px 20px 95px 20px;
+  }
+
+  @include breakpoint($mobile) {
+    flex-direction: column;
+    gap: 70px;
+    padding: 70px 24px 30px 24px;
+  }
 }
 
 .categories__card {
@@ -19,6 +30,11 @@
   &:hover > .categories__link {
     color: $dark-orange;
   }
+
+  @include breakpoint($tablet) {
+    width: 223px;
+    height: 165px;
+  }
 }
 
 .categories__img {
@@ -26,6 +42,10 @@
   transform: translate(-50%, -32%);
   left: 50%;
   height: 200px;
+
+  @include breakpoint($tablet) {
+    height: 144px;
+  }
 }
 
 .categories__title {
@@ -36,6 +56,14 @@
   color: $black;
   padding-top: 116px;
   margin-bottom: 15px;
+
+  @include breakpoint($tablet) {
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 1.1px;
+    padding-top: 88px;
+    margin-bottom: 17px;
+  }
 }
 
 .categories__link {

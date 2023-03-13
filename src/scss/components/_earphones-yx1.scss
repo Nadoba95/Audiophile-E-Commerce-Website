@@ -1,5 +1,9 @@
 .earphones-yx1 {
   padding: 0 20px;
+
+  @include breakpoint($tablet) {
+    padding: 0 40px;
+  }
 }
 
 .earphones-yx1__container {
@@ -7,6 +11,10 @@
   margin: 0 auto;
   display: flex;
   gap: 30px;
+
+  @include breakpoint($tablet) {
+    gap: 10px;
+  }
 }
 
 .earphones-yx1__img {
@@ -16,6 +24,11 @@
   width: clamp(200px, 50%, 540px);
   height: 320px;
   border-radius: 8px;
+
+  @include breakpoint($tablet) {
+    background-image: url("../../assets/home/tablet/image-earphones-yx1.jpg");
+    width: clamp(200px, 50%, 50%);
+  }
 }
 
 .earphones-yx1__card {
@@ -26,6 +39,11 @@
   gap: 32px;
   padding: 100px 0 0 95px;
   border-radius: 8px;
+
+  @include breakpoint($tablet) {
+    padding: 100px 0 0 41px;
+    width: clamp(200px, 50%, 50%);
+  }
 }
 
 .earphones-yx1__title {

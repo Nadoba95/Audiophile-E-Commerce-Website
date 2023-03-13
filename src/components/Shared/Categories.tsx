@@ -12,7 +12,7 @@ const Categories: React.FC = () => {
         <img className="categories__img" src={headphonesImg} alt="headphones" />
         <h2 className="categories__title">HEADPHONES</h2>
         <div className="categories__link">
-          Shop
+          SHOP
           <ArrowRightIcon />
         </div>
       </Link>
@@ -20,7 +20,7 @@ const Categories: React.FC = () => {
         <img className="categories__img" src={speakersImg} alt="speakers" />
         <h2 className="categories__title">SPEAKERS</h2>
         <div className="categories__link">
-          Shop
+          SHOP
           <ArrowRightIcon />
         </div>
       </Link>
@@ -28,7 +28,7 @@ const Categories: React.FC = () => {
         <img className="categories__img" src={earphonesImg} alt="earphones" />
         <h2 className="categories__title">EARPHONES</h2>
         <div className="categories__link">
-          Shop
+          SHOP
           <ArrowRightIcon />
         </div>
       </Link>
