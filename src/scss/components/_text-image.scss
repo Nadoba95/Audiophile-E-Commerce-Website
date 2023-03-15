@@ -4,6 +4,10 @@
   @include breakpoint($tablet) {
     padding: 95px 40px;
   }
+
+  @include breakpoint($mobile) {
+    padding: 90px 24px;
+  }
 }
 
 .text-image__container {
@@ -17,6 +21,10 @@
   @include breakpoint($tablet) {
     flex-direction: column-reverse;
     gap: 63px;
+  }
+
+  @include breakpoint($mobile) {
+    gap: 40px;
   }
 }
 
@@ -42,7 +50,13 @@
   font-size: 40px;
   font-weight: 700;
   line-height: 44px;
-  letter-spacing: 1.4;
+  letter-spacing: 1.4px;
+
+  @include breakpoint($mobile) {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 1px;
+  }
 }
 
 .text-image__title--orange {

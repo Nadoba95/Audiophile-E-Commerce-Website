@@ -6,6 +6,11 @@
     padding: 0 40px;
     margin-bottom: 32px;
   }
+
+  @include breakpoint($mobile) {
+    padding: 90px 24px 0 24px;
+    margin-bottom: 24px;
+  }
 }
 
 .speaker-zx9__container {
@@ -20,6 +25,10 @@
   @include breakpoint($tablet) {
     min-height: 720px;
   }
+
+  @include breakpoint($mobile) {
+    min-height: 600px;
+  }
 }
 
 .speaker-zx9__circles-icon {
@@ -29,6 +38,11 @@
   @include breakpoint($tablet) {
     transform: translate(-50%, -35%);
     left: 50%;
+  }
+
+  @include breakpoint($mobile) {
+    scale: 0.6;
+    transform: translate(-83%, -56%);
   }
 }
 
@@ -44,6 +58,11 @@
     flex-direction: column;
     gap: 64px;
   }
+
+  @include breakpoint($mobile) {
+    flex-direction: column;
+    gap: 55px;
+  }
 }
 
 .speaker-zx9__img {
@@ -55,6 +74,10 @@
     height: 237px;
     position: static;
     padding-top: 52px;
+  }
+
+  @include breakpoint($mobile) {
+    padding-top: 55px;
   }
 }
 
@@ -70,6 +93,10 @@
     text-align: center;
     align-items: center;
   }
+
+  @include breakpoint($mobile) {
+    max-width: 280px;
+  }
 }
 
 .speaker-zx9__title {
@@ -79,6 +106,12 @@
   letter-spacing: 2px;
   margin-bottom: 24px;
   max-width: 261px;
+
+  @include breakpoint($mobile) {
+    font-size: 38px;
+    line-height: 40px;
+    letter-spacing: 1.3px;
+  }
 }
 
 .speaker-zx9__description {
@@ -88,4 +121,8 @@
   opacity: 0.75;
   margin-bottom: 40px;
   max-width: 349px;
+
+  @include breakpoint($mobile) {
+    margin-bottom: 24px;
+  }
 }

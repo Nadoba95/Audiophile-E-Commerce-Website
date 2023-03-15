@@ -7,13 +7,13 @@
 
   @include breakpoint($tablet) {
     gap: 10px;
-    padding: 150px 20px 95px 20px;
+    padding: 150px 40px 95px 40px;
   }
 
   @include breakpoint($mobile) {
     flex-direction: column;
     gap: 70px;
-    padding: 70px 24px 30px 24px;
+    padding: 90px 24px 30px 24px;
   }
 }
 
@@ -32,8 +32,13 @@
   }
 
   @include breakpoint($tablet) {
-    width: 223px;
+    width: 33.33%;
     height: 165px;
+  }
+
+  @include breakpoint($mobile) {
+    width: 100%;
+    max-width: 327px;
   }
 }
 

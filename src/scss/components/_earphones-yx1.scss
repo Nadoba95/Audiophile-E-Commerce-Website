@@ -4,6 +4,10 @@
   @include breakpoint($tablet) {
     padding: 0 40px;
   }
+
+  @include breakpoint($mobile) {
+    padding: 0 24px;
+  }
 }
 
 .earphones-yx1__container {
@@ -14,6 +18,11 @@
 
   @include breakpoint($tablet) {
     gap: 10px;
+  }
+
+  @include breakpoint($mobile) {
+    flex-direction: column;
+    gap: 24px;
   }
 }
 
@@ -27,7 +36,13 @@
 
   @include breakpoint($tablet) {
     background-image: url("../../assets/home/tablet/image-earphones-yx1.jpg");
-    width: clamp(200px, 50%, 50%);
+    width: 50%;
+  }
+
+  @include breakpoint($mobile) {
+    background-image: url("../../assets/home/mobile/image-earphones-yx1.jpg");
+    width: 100%;
+    height: 200px;
   }
 }
 
@@ -42,7 +57,12 @@
 
   @include breakpoint($tablet) {
     padding: 100px 0 0 41px;
-    width: clamp(200px, 50%, 50%);
+    width: 50%;
+  }
+
+  @include breakpoint($mobile) {
+    padding: 41px 24px;
+    width: 100%;
   }
 }
 

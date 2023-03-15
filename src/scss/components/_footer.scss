@@ -5,6 +5,10 @@
   @include breakpoint($tablet) {
     padding: 0 40px 50px 40px;
   }
+
+  @include breakpoint($mobile) {
+    padding: 0 24px 38px 24px;
+  }
 }
 
 .footer__container {
@@ -20,6 +24,11 @@
   position: absolute;
   top: 0;
   left: 0;
+
+  @include breakpoint($mobile) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .footer__box {
@@ -34,6 +43,11 @@
     align-items: baseline;
     margin-bottom: 80px;
   }
+
+  @include breakpoint($mobile) {
+    gap: 48px;
+    align-items: center;
+  }
 }
 
 .footer__box--padding {
@@ -44,11 +58,22 @@
     padding-top: 65px;
     margin-bottom: 32px;
   }
+
+  @include breakpoint($mobile) {
+    padding-top: 52px;
+    margin-bottom: 48px;
+  }
 }
 
 .footer__links {
   display: flex;
   gap: 34px;
+
+  @include breakpoint($mobile) {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
 }
 
 .footer__link {
@@ -73,6 +98,10 @@
   @include breakpoint($tablet) {
     max-width: none;
   }
+
+  @include breakpoint($mobile) {
+    text-align: center;
+  }
 }
 
 .footer__social-links {
@@ -87,6 +116,12 @@
     right: 0;
     z-index: 10;
   }
+
+  @include breakpoint($mobile) {
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+  }
 }
 
 .footer__social-link:hover .footer__icon {
@@ -98,4 +133,12 @@
   font-weight: 700;
   line-height: 25px;
   opacity: 0.5;
+
+  @include breakpoint($mobile) {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    padding-bottom: 72px;
+  }
 }

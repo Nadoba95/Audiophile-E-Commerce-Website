@@ -6,6 +6,11 @@
     padding: 0 40px;
     margin-bottom: 32px;
   }
+
+  @include breakpoint($mobile) {
+    padding: 0 24px;
+    margin-bottom: 24px;
+  }
 }
 
 .speaker-zx7__container {
@@ -20,6 +25,10 @@
   @include breakpoint($tablet) {
     background-image: url("../../assets/home/tablet/image-speaker-zx7.jpg");
   }
+
+  @include breakpoint($tablet) {
+    background-image: url("../../assets/home/mobile/image-speaker-zx7.jpg");
+  }
 }
 
 .speaker-zx7__card {
@@ -30,6 +39,10 @@
 
   @include breakpoint($tablet) {
     padding: 100px 0 0 62px;
+  }
+
+  @include breakpoint($mobile) {
+    padding: 100px 0 0 24px;
   }
 }
 
