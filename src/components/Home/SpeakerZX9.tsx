@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import CirclesIcon from "../Icons/CirclesIcon";
+import BlackButton from "../UI/Buttons/BlackButton";
 
 const speakerImg: string = require("../../assets/home/desktop/image-speaker-zx9.png");
 
@@ -16,9 +16,7 @@ const SpeakerZX9: React.FC = () => {
               Upgrade to premium speakers that are phenomenally built to deliver truly remarkable
               sound.
             </p>
-            <Link className="black-button" to="/">
-              SEE PRODUCT
-            </Link>
+            <BlackButton to="/" />
           </div>
         </div>
       </div>

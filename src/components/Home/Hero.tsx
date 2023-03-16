@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import PrimaryButton from "../UI/Buttons/PrimaryButton";
 
 const Hero: React.FC = () => {
   return (
@@ -11,9 +11,7 @@ const Hero: React.FC = () => {
             Experience natural, lifelike audio and exceptional build quality made for the passionate
             music enthusiast.
           </p>
-          <Link className="primary-button" to="/">
-            SEE PRODUCT
-          </Link>
+          <PrimaryButton to="/" />
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import SecondaryButton from "../UI/Buttons/SecondaryButton";
 
 const EarphonesYX1: React.FC = () => {
   return (
@@ -7,9 +7,7 @@ const EarphonesYX1: React.FC = () => {
         <div className="earphones-yx1__img"></div>
         <div className="earphones-yx1__card">
           <h2 className="earphones-yx1__title">YX1 EARPHONES</h2>
-          <Link className="secondary-button" to="/">
-            SEE PRODUCT
-          </Link>
+          <SecondaryButton to="/" />
         </div>
       </div>
     </section>

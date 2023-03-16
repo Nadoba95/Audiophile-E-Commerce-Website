@@ -29,17 +29,17 @@ const Header: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link className="btn header__link" to="/">
+              <Link className="btn header__link" to="/headphones">
                 HEADPHONES
               </Link>
             </li>
             <li>
-              <Link className="btn header__link" to="/">
+              <Link className="btn header__link" to="/speakers">
                 SPEAKERS
               </Link>
             </li>
             <li>
-              <Link className="btn header__link" to="/">
+              <Link className="btn header__link" to="/earphones">
                 EARPHONES
               </Link>
             </li>

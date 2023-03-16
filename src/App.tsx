@@ -2,6 +2,7 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+import ScrollToTop from "./components/Helpers/ScrollToTop";
 import NavModal from "./components/UI/NavModal";
 import Category from "./pages/Category";
 import Home from "./pages/Home";
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Header />
       {showNav && <NavModal />}
       <main>

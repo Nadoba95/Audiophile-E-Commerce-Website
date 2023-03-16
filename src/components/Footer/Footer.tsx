@@ -18,17 +18,17 @@ const Footer: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link className="btn footer__link" to="/">
+              <Link className="btn footer__link" to="/headphones">
                 HEADPHONES
               </Link>
             </li>
             <li>
-              <Link className="btn footer__link" to="/">
+              <Link className="btn footer__link" to="/speakers">
                 SPEAKER
               </Link>
             </li>
             <li>
-              <Link className="btn footer__link" to="/">
+              <Link className="btn footer__link" to="/earphones">
                 EARPHONES
               </Link>
             </li>
@@ -42,34 +42,19 @@ const Footer: React.FC = () => {
           </p>
           <ul className="footer__social-links">
             <li>
-              <a
-                className="footer__social-link"
-                href="https://www.facebook.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <Link className="footer__social-link" to="https://www.facebook.com/" target="_blank">
                 <FacebookIcon />
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                className="footer__social-link"
-                href="https://www.twitter.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <Link className="footer__social-link" to="https://www.twitter.com/" target="_blank">
                 <TwitterIcon />
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                className="footer__social-link"
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <Link className="footer__social-link" to="https://www.instagram.com/" target="_blank">
                 <InstagramIcon />
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
