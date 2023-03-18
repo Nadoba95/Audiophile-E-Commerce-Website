@@ -1,11 +1,9 @@
 interface Product {
+  id: number;
   category: string;
   name: string;
-  image: {
-    desktop: string;
-    mobile: string;
-    tablet: string;
-  };
+  slug: string;
+  image: string;
   description: string;
   isNew: boolean;
 }

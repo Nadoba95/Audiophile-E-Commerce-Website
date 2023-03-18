@@ -7,37 +7,44 @@ import TextImage from "../components/Shared/TextImage";
 import Product from "../models/product";
 import productsData from "../products.json";
 
+const IMAGE_SIZE = "desktop";
+
 const Category: React.FC = () => {
-  const [products, setProducts] = useState<Product[] | null>(null);
-  const { category } = useParams();
+  const [products, setProducts] = useState<Product[]>([]);
+  const { category } = useParams<{ category: string }>();
   const navigate = useNavigate();
 
   useEffect(() => {
-    let productsArr: Product[] = [];
+    const filteredProducts: Product[] = productsData
+      .filter((product) => product.category === category)
+      .map(({ id, category, name, slug, image, description, new: isNew }) => {
+        return {
+          id,
+          category,
+          name,
+          slug,
+          image: image[IMAGE_SIZE],
+          description,
+          isNew,
+        };
+      });
 
-    productsData.forEach((product) => {
-      if (product.category === category) {
-        productsArr.push({
-          category: product.category,
-          name: product.name,
-          image: product.image,
-          description: product.description,
-          isNew: product.new,
-        });
-      }
-    });
-
-    if (productsArr.length > 0) {
-      setProducts(productsArr.reverse());
-    } else {
+    if (filteredProducts.length === 0) {
       navigate("/");
+      return;
     }
-  }, [category]);
+
+    setProducts(filteredProducts.reverse());
+  }, [category, navigate]);
+
+  if (!products || !category) {
+    return null;
+  }
 
   return (
     <>
-      {products && <CategoryHead title={products[0].category} />}
-      {products && <CategoryList products={products} />}
+      <CategoryHead title={category} />
+      <CategoryList products={products} />
       <Categories />
       <TextImage />
     </>

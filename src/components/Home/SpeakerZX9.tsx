@@ -16,7 +16,7 @@ const SpeakerZX9: React.FC = () => {
               Upgrade to premium speakers that are phenomenally built to deliver truly remarkable
               sound.
             </p>
-            <BlackButton to="/" />
+            <BlackButton to="/speakers/zx9-speaker" />
           </div>
         </div>
       </div>

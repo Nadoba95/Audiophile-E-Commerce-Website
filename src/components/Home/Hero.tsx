@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
             Experience natural, lifelike audio and exceptional build quality made for the passionate
             music enthusiast.
           </p>
-          <PrimaryButton to="/" />
+          <PrimaryButton to="/headphones/xx99-mark-two-headphones" />
         </div>
       </div>
     </section>

@@ -7,7 +7,7 @@ const EarphonesYX1: React.FC = () => {
         <div className="earphones-yx1__img"></div>
         <div className="earphones-yx1__card">
           <h2 className="earphones-yx1__title">YX1 EARPHONES</h2>
-          <SecondaryButton to="/" />
+          <SecondaryButton to="/earphones/yx1-earphones" />
         </div>
       </div>
     </section>

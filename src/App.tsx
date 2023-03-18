@@ -1,31 +1,27 @@
-import { useSelector } from "react-redux/es/hooks/useSelector";
+// import { lazy } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import ScrollToTop from "./components/Helpers/ScrollToTop";
-import NavModal from "./components/UI/NavModal";
-import Category from "./pages/Category";
+import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
+import Category from "./pages/Category";
+import ProductDetails from "./pages/ProductDetails";
+import ScrollToTop from "./components/Helpers/ScrollToTop";
 
-type UIState = {
-  ui: {
-    navIsVisible: boolean;
-  };
-};
+// const Home = lazy(() => import("./pages/Home"));
+// const Category = lazy(() => import("./pages/Category"));
+// const ProductDetails = lazy(() => import("./pages/ProductDetails"));
 
 function App() {
-  const showNav = useSelector((state: UIState) => state.ui.navIsVisible);
-
   return (
     <>
       <ScrollToTop />
       <Header />
-      {showNav && <NavModal />}
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="*" element={<Navigate to="/" />} />
           <Route path="/:category" element={<Category />} />
+          <Route path="/:category/:product" element={<ProductDetails />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>
       <Footer />

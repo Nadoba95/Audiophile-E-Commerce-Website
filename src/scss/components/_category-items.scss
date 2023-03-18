@@ -1,5 +1,13 @@
 .category-items {
   padding: 160px 20px 40px 20px;
+
+  @include breakpoint($tablet) {
+    padding: 120px 40px 20px 40px;
+  }
+
+  @include breakpoint($mobile) {
+    padding: 65px 24px 80px 24px;
+  }
 }
 
 .category-items__container {
@@ -8,10 +16,23 @@
   display: flex;
   flex-direction: column;
   gap: 160px;
+
+  @include breakpoint($tablet) {
+    gap: 120px;
+  }
 }
 
 .category-items__container .category-items__box:nth-child(2n + 0) {
   flex-direction: row-reverse;
+
+  @include breakpoint($tablet) {
+    gap: 52px;
+    flex-direction: column;
+  }
+
+  @include breakpoint($mobile) {
+    gap: 32px;
+  }
 }
 
 .category-items__box {
@@ -20,12 +41,55 @@
   align-items: center;
   gap: 20px;
   color: $black;
+
+  @include breakpoint($tablet) {
+    gap: 52px;
+    flex-direction: column;
+  }
+
+  @include breakpoint($mobile) {
+    gap: 32px;
+  }
+}
+
+.category-items__img-wrapper {
+  width: 540px;
+  border-radius: 8px;
+
+  @include breakpoint($tablet) {
+    width: 100%;
+    background-color: $dirty-white;
+  }
+
+  @include breakpoint($mobile) {
+    max-width: 327px;
+  }
+}
+
+.category-items__img {
+  width: 100%;
+  border-radius: 8px;
+
+  @include breakpoint($tablet) {
+    aspect-ratio: 1.95;
+    object-fit: contain;
+  }
+
+  @include breakpoint($mobile) {
+    aspect-ratio: auto;
+  }
 }
 
 .category-items__card {
   display: flex;
   flex-direction: column;
   max-width: 445px;
+
+  @include breakpoint($tablet) {
+    align-items: center;
+    text-align: center;
+    max-width: 572px;
+  }
 }
 
 .category-items__overline {
@@ -34,6 +98,10 @@
   letter-spacing: 10px;
   color: $dark-orange;
   margin-bottom: 16px;
+
+  @include breakpoint($mobile) {
+    margin-bottom: 24px;
+  }
 }
 
 .category-items__title {
@@ -42,6 +110,17 @@
   line-height: 44px;
   letter-spacing: 1.43px;
   margin-bottom: 32px;
+
+  @include breakpoint($tablet) {
+    max-width: 445px;
+  }
+
+  @include breakpoint($mobile) {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+  }
 }
 
 .category-items__description {
@@ -50,4 +129,8 @@
   line-height: 25px;
   margin-bottom: 40px;
   opacity: 0.5;
+
+  @include breakpoint($tablet) {
+    margin-bottom: 24px;
+  }
 }

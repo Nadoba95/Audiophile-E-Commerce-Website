@@ -1,6 +1,10 @@
 .category-head {
   background-color: $black;
   padding: 100px 20px;
+
+  @include breakpoint($mobile) {
+    padding: 35px 24px;
+  }
 }
 
 .category-head__title {
@@ -10,4 +14,10 @@
   letter-spacing: 1.43px;
   text-align: center;
   text-transform: uppercase;
+
+  @include breakpoint($mobile) {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 2px;
+  }
 }

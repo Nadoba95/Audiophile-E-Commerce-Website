@@ -5,8 +5,8 @@ const CategoryList: React.FC<{ products: Product[] }> = ({ products }) => {
   return (
     <section className="category-items">
       <div className="category-items__container">
-        {products.map((product, i) => (
-          <CategoryItem key={i} product={product} />
+        {products.map((product) => (
+          <CategoryItem key={product.id} product={product} />
         ))}
       </div>
     </section>

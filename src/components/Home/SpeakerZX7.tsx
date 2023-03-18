@@ -6,7 +6,7 @@ const SpeakerZX7: React.FC = () => {
       <div className="speaker-zx7__container">
         <div className="speaker-zx7__card">
           <h2 className="speaker-zx7__title">ZX7 SPEAKER</h2>
-          <SecondaryButton to="/" />
+          <SecondaryButton to="/speakers/zx7-speaker" />
         </div>
       </div>
     </section>
