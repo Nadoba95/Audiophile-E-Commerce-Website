@@ -13,6 +13,12 @@ const uiSlice = createSlice({
     toggle(state) {
       state.navIsVisible = !state.navIsVisible;
     },
+
+    close(state) {
+      if (state.navIsVisible) {
+        state.navIsVisible = false;
+      }
+    },
   },
 });
 

@@ -2,9 +2,9 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Home from "./pages/Home";
-import Category from "./pages/Category";
-import ProductDetails from "./pages/ProductDetails";
+import Home from "./Pages/Home";
+import Category from "./Pages/Category";
+import ProductDetails from "./Pages/ProductDetails";
 import ScrollToTop from "./components/Helpers/ScrollToTop";
 
 // const Home = lazy(() => import("./pages/Home"));

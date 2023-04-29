@@ -1,6 +1,6 @@
-import { useQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import CategoryHead from "../components/Category/CategoryHead";
 import CategoryList from "../components/Category/CategoryList";
 import Categories from "../components/Shared/Categories";
@@ -40,7 +40,7 @@ const Category: React.FC = () => {
   });
 
   if (isLoading) {
-    return <p className="loading-message">Loading...</p>;
+    return <p className="loading-message">Loading data...</p>;
   }
 
   if (!products || !category) {
