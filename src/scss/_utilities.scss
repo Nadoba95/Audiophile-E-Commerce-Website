@@ -17,3 +17,15 @@ ul,
 ol {
   list-style: none;
 }
+
+.loading-message {
+  text-align: center;
+  color: $black;
+  font-size: 30px;
+  margin-top: 200px;
+
+  @include breakpoint($mobile) {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}

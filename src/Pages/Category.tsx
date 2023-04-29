@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import CategoryHead from "../components/Category/CategoryHead";
 import CategoryList from "../components/Category/CategoryList";
@@ -10,12 +11,11 @@ import productsData from "../products.json";
 const IMAGE_SIZE = "desktop";
 
 const Category: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>([]);
   const { category } = useParams<{ category: string }>();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const filteredProducts: Product[] = productsData
+  const filteredProducts: Product[] = useMemo(() => {
+    return productsData
       .filter((product) => product.category === category)
       .map(({ id, category, name, slug, image, description, new: isNew }) => {
         return {
@@ -28,14 +28,20 @@ const Category: React.FC = () => {
           isNew,
         };
       });
+  }, [category]);
 
+  const { data: products, isLoading } = useQuery([category], () => {
     if (filteredProducts.length === 0) {
       navigate("/");
-      return;
+      return null;
     }
 
-    setProducts(filteredProducts.reverse());
-  }, [category, navigate]);
+    return filteredProducts.reverse();
+  });
+
+  if (isLoading) {
+    return <p className="loading-message">Loading...</p>;
+  }
 
   if (!products || !category) {
     return null;

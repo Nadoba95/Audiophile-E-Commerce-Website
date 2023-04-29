@@ -19,7 +19,7 @@ const Header: React.FC = () => {
       <header className="header">
         <div className="header__container">
           <div className="header__box">
-            <button className="btn header__menu-btn" onClick={toggleNavHandler}>
+            <button className="btn header__menu-btn" onClick={toggleNavHandler} aria-label="Menu">
               <HamburgerIcon />
             </button>
             <LogoIcon />
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
               </li>
             </ul>
           </nav>
-          <button className="btn" type="button">
+          <button className="btn" type="button" aria-label="Cart">
             <CartIcon />
           </button>
         </div>

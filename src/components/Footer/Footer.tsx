@@ -42,17 +42,32 @@ const Footer: React.FC = () => {
           </p>
           <ul className="footer__social-links">
             <li>
-              <Link className="footer__social-link" to="https://www.facebook.com/" target="_blank">
+              <Link
+                className="footer__social-link"
+                to="https://www.facebook.com/"
+                target="_blank"
+                aria-label="Facebook"
+              >
                 <FacebookIcon />
               </Link>
             </li>
             <li>
-              <Link className="footer__social-link" to="https://www.twitter.com/" target="_blank">
+              <Link
+                className="footer__social-link"
+                to="https://www.twitter.com/"
+                target="_blank"
+                aria-label="Twitter"
+              >
                 <TwitterIcon />
               </Link>
             </li>
             <li>
-              <Link className="footer__social-link" to="https://www.instagram.com/" target="_blank">
+              <Link
+                className="footer__social-link"
+                to="https://www.instagram.com/"
+                target="_blank"
+                aria-label="Instagram"
+              >
                 <InstagramIcon />
               </Link>
             </li>
