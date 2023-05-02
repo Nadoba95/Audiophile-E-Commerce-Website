@@ -1,0 +1,93 @@
+.product-item__features-wrapper {
+  padding: 160px 0;
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint($tablet) {
+    padding: 120px 0;
+    flex-direction: column;
+    gap: 120px;
+  }
+
+  @include breakpoint($mobile) {
+    padding: 88px 0;
+    gap: 88px;
+  }
+}
+
+.product-item__features {
+  display: flex;
+  flex-direction: column;
+  max-width: 635px;
+
+  @include breakpoint($tablet) {
+    max-width: 100%;
+  }
+}
+
+.product-item__features-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 1.14px;
+  margin-bottom: 32px;
+
+  @include breakpoint($tablet) {
+    display: flex;
+  }
+
+  @include breakpoint($mobile) {
+    font-size: 24px;
+    letter-spacing: 0.9px;
+    margin-bottom: 24px;
+  }
+}
+
+.product-item__in-box {
+  @include breakpoint($tablet) {
+    display: flex;
+  }
+
+  @include breakpoint($mobile) {
+    flex-direction: column;
+  }
+}
+
+.product-item__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include breakpoint($tablet) {
+    margin-left: 130px;
+  }
+
+  @include breakpoint($mobile) {
+    margin-left: 0;
+  }
+}
+
+.product-item__features-desc,
+.product-item__list-item {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  color: rgba($color: $black, $alpha: 0.5);
+}
+
+.product-item__list-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @include breakpoint($tablet) {
+    gap: 24px;
+  }
+}
+
+.product-item__count {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  color: $dark-orange;
+}

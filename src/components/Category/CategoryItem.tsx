@@ -5,7 +5,7 @@ const CategoryItem: React.FC<{ product: Product }> = ({ product }) => {
   return (
     <div className="category-items__box">
       <div className="category-items__img-wrapper">
-        <img className="category-items__img" src={product.image} alt={product.name} />
+        <img className="category-items__img" src={product.image} alt={product.slug} />
       </div>
       <div className="category-items__card">
         {product.isNew && <p className="category-items__overline">NEW PRODUCT</p>}

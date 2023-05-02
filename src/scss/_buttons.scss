@@ -54,3 +54,24 @@
     background-color: #4c4c4c;
   }
 }
+
+.back-button {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  color: rgba($color: $black, $alpha: 0.5);
+  position: absolute;
+  top: 80px;
+
+  &:hover {
+    color: rgba($color: $black, $alpha: 1);
+  }
+
+  @include breakpoint($tablet) {
+    top: 33px;
+  }
+
+  @include breakpoint($tablet) {
+    top: 16px;
+  }
+}
