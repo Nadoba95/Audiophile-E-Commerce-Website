@@ -1,4 +1,3 @@
-// import { lazy } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -6,10 +5,7 @@ import Home from "./Pages/Home";
 import Category from "./Pages/Category";
 import ProductDetails from "./Pages/ProductDetails";
 import ScrollToTop from "./components/Helpers/ScrollToTop";
-
-// const Home = lazy(() => import("./pages/Home"));
-// const Category = lazy(() => import("./pages/Category"));
-// const ProductDetails = lazy(() => import("./pages/ProductDetails"));
+import Checkout from "./Pages/Checkout";
 
 function App() {
   return (
@@ -21,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/:category" element={<Category />} />
           <Route path="/:category/:product" element={<ProductDetails />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>

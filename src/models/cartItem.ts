@@ -3,6 +3,7 @@ interface CartItem {
   name: string;
   amount: number;
   price: number;
+  img: string;
 }
 
 export default CartItem;

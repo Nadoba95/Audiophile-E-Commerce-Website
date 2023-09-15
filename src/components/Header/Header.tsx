@@ -5,13 +5,19 @@ import CartIcon from "../Icons/CartIcon";
 import HamburgerIcon from "../Icons/HamburgerIcon";
 import LogoIcon from "../Icons/LogoIcon";
 import NavModal from "../UI/NavModal";
+import CartModal from "../UI/CartModal";
 
 const Header: React.FC = () => {
   const showNav = useSelector((state: { ui: { navIsVisible: boolean } }) => state.ui.navIsVisible);
+  const showCart = useSelector((state: { ui: { cartIsVisible: boolean } }) => state.ui.cartIsVisible);
   const dispatch = useDispatch();
 
   function toggleNavHandler() {
-    dispatch(uiActions.toggle());
+    dispatch(uiActions.toggleNav());
+  }
+
+  function toggleCartHandler() {
+    dispatch(uiActions.toggleCart());
   }
 
   return (
@@ -48,12 +54,13 @@ const Header: React.FC = () => {
               </li>
             </ul>
           </nav>
-          <button className="btn" type="button" aria-label="Cart">
+          <button className="btn header__btn-cart" type="button" aria-label="Cart" onClick={toggleCartHandler}>
             <CartIcon />
           </button>
         </div>
       </header>
       {showNav && <NavModal />}
+      {showCart && <CartModal />}
     </>
   );
 };

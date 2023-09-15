@@ -10,7 +10,7 @@ const Categories: React.FC = () => {
   const dispatch = useDispatch();
 
   function closeNavModalHandler() {
-    dispatch(uiActions.close());
+    dispatch(uiActions.closeNav());
   }
 
   return (

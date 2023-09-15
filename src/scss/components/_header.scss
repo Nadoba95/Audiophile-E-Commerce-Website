@@ -68,3 +68,11 @@
   align-items: center;
   gap: 42px;
 }
+
+.cart-icon > path {
+  transition: $hover-transition;
+}
+
+.header__btn-cart:hover > .cart-icon > path {
+  fill: $dark-orange;
+}

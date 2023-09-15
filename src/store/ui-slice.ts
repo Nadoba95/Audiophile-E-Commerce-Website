@@ -2,22 +2,31 @@ import { createSlice } from "@reduxjs/toolkit";
 
 type UI = {
   navIsVisible: boolean;
+  cartIsVisible: boolean;
 };
 
-const initialUiState: UI = { navIsVisible: false };
+const initialUiState: UI = { navIsVisible: false, cartIsVisible: false };
 
 const uiSlice = createSlice({
   name: "ui",
   initialState: initialUiState,
   reducers: {
-    toggle(state) {
+    toggleNav(state) {
       state.navIsVisible = !state.navIsVisible;
+      state.cartIsVisible = false;
     },
 
-    close(state) {
-      if (state.navIsVisible) {
-        state.navIsVisible = false;
-      }
+    closeNav(state) {
+      state.navIsVisible = false;
+    },
+
+    toggleCart(state) {
+      state.cartIsVisible = !state.cartIsVisible;
+      state.navIsVisible = false;
+    },
+
+    closeCart(state) {
+      state.cartIsVisible = false;
     },
   },
 });
