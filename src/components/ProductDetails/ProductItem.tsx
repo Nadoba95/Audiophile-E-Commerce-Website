@@ -34,10 +34,10 @@ const ProductItem: React.FC<{ item: Product }> = ({ item }) => {
   };
 
   return (
-    <section className="product-item">
+    <div className="product-item">
       <div className="product-item__container">
         <BackButton />
-        <div className="product-item__box">
+        <section className="product-item__box">
           <div className="product-item__img-wrapper">
             <img className="product-item__img" src={img} alt={item.slug} />
           </div>
@@ -59,12 +59,12 @@ const ProductItem: React.FC<{ item: Product }> = ({ item }) => {
               <PrimaryButton cartItem={cartItem} />
             </div>
           </div>
-        </div>
+        </section>
         <ProductItemFeatures item={item} />
         <ProductItemImages item={item} />
         <OtherProductsList item={item} />
       </div>
-    </section>
+    </div>
   );
 };
 

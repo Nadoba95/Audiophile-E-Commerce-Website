@@ -5,7 +5,7 @@ const IMAGE_SIZE = "desktop";
 
 const OtherProductsItem: React.FC<{ item: Product }> = ({ item }) => {
   return (
-    <div className="other-products__box">
+    <section className="other-products__box">
       {item.others?.map((el) => {
         const category = el.slug.includes("speaker")
           ? "speakers"
@@ -25,7 +25,7 @@ const OtherProductsItem: React.FC<{ item: Product }> = ({ item }) => {
           </div>
         );
       })}
-    </div>
+    </section>
   );
 };
 

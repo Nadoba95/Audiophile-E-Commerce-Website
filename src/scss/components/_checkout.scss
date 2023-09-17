@@ -1,0 +1,149 @@
+.checkout {
+  padding: 140px 20px;
+  position: relative;
+  background-color: $dirty-white;
+
+  @include breakpoint($tablet) {
+    padding: 120px 40px;
+  }
+
+  @include breakpoint($mobile) {
+    padding: 65px 24px;
+  }
+}
+
+.checkout__container {
+  width: clamp(200px, 100%, 1110px);
+  margin: 0 auto;
+  color: $black;
+}
+
+.checkout__box {
+  display: flex;
+  gap: 30px;
+}
+
+.form {
+  background-color: $white;
+  padding: 54px 48px 48px 48px;
+  border-radius: 8px;
+  width: clamp(200px, 100%, 730px);
+}
+
+.form__title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1.14px;
+  margin-bottom: 41px;
+}
+
+.form__overline {
+  color: $dark-orange;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.93px;
+  margin-bottom: 16px;
+}
+
+.form__overline--margin {
+  margin-top: 53px;
+}
+
+.form__items-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 15px;
+  row-gap: 24px;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form__item--width {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.form__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.214px;
+  width: fit-content;
+}
+
+.form__input {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  padding: 18px 24px;
+  border: 1px solid $gray;
+  border-radius: 8px;
+  cursor: pointer;
+  caret-color: $dark-orange;
+  outline: none;
+
+  &::placeholder {
+    opacity: 0.4;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $dark-orange;
+  }
+}
+
+.form__radio-box {
+  height: 56px;
+  border: 1px solid $gray;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+
+  & > .form__input,
+  & > .form__label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  & > .form__input {
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    accent-color: $dark-orange;
+    cursor: pointer;
+  }
+
+  & > .form__label {
+    left: 50px;
+    cursor: pointer;
+  }
+
+  &:has(.form__input[type="radio"]:checked) {
+    border-color: $dark-orange;
+  }
+}
+
+.from__cash-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 30px;
+}
+
+.form__cash-text {
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.summary {
+  padding: 32px;
+  background-color: $white;
+  border-radius: 8px;
+  width: clamp(200px, 100%, 350px);
+  height: fit-content;
+}
