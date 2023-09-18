@@ -12,15 +12,19 @@ const Cart: React.FC = () => {
   const dispatch = useDispatch();
 
   function removeAllItemsHandler(): void {
-    dispatch(cartActions.removeAll());
+    dispatch(cartActions.clear());
   }
 
   function closeCartHandler(): void {
     dispatch(uiActions.closeCart());
   }
 
+  function cartHandler(e: React.MouseEvent) {
+    e.stopPropagation();
+  }
+
   return (
-    <div className="cart">
+    <div className="cart" onClick={cartHandler}>
       <div className="cart__header">
         <span className="cart__amount">{`CART (${cartItems.length})`}</span>
         <button className="btn cart__remove" onClick={removeAllItemsHandler}>
@@ -34,7 +38,7 @@ const Cart: React.FC = () => {
           ))}
         </div>
       )}
-      <div className="cart__footer">
+      <div className="cart__footer-box">
         <p className="cart__total">TOTAL</p>
         <p className="cart__total-amount">{`$ ${formatPrice(total)}`}</p>
       </div>

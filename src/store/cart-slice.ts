@@ -19,14 +19,14 @@ const initialState: Cart = {
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: initialState,
+  initialState: JSON.parse(localStorage.getItem("cart")!) || initialState,
   reducers: {
     addItem: (state, action: PayloadAction<CartItem>) => {
       const updatedTotalPrice = state.totalPrice + action.payload.amount * action.payload.price;
-      const updatedVatPrice = updatedTotalPrice * 0.2;
+      const updatedVatPrice = Math.round(updatedTotalPrice * 0.2);
       const updatedGrandTotal = updatedTotalPrice + updatedVatPrice + SHIPPING;
 
-      const existingItemIndex = state.items.findIndex((item) => item.id === action.payload.id);
+      const existingItemIndex = state.items.findIndex((item: CartItem) => item.id === action.payload.id);
       const existingItem = state.items[existingItemIndex];
 
       let updatedItems;
@@ -42,26 +42,30 @@ const cartSlice = createSlice({
         updatedItems = state.items.concat(action.payload);
       }
 
-      return {
+      const cart = {
         items: updatedItems,
         totalPrice: updatedTotalPrice,
         vatPrice: updatedVatPrice,
         grandTotal: updatedGrandTotal,
       };
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      return cart;
     },
 
     removeItem: (state, action: PayloadAction<CartItem>) => {
       const updatedTotalPrice = state.totalPrice - action.payload.amount * action.payload.price;
-      const updatedVatPrice = updatedTotalPrice * 0.2;
+      const updatedVatPrice = Math.round(updatedTotalPrice * 0.2);
       const updatedGrandTotal = updatedTotalPrice + updatedVatPrice + SHIPPING;
 
-      const existingItemIndex = state.items.findIndex((item) => item.id === action.payload.id);
+      const existingItemIndex = state.items.findIndex((item: CartItem) => item.id === action.payload.id);
       const existingItem = state.items[existingItemIndex];
 
       let updatedItems;
 
       if (existingItem.amount === 1) {
-        updatedItems = state.items.filter((item) => item.id !== action.payload.id);
+        updatedItems = state.items.filter((item: CartItem) => item.id !== action.payload.id);
       } else {
         const updatedItem = {
           ...existingItem,
@@ -71,15 +75,22 @@ const cartSlice = createSlice({
         updatedItems[existingItemIndex] = updatedItem;
       }
 
-      return {
+      const cart = {
         items: updatedItems,
         totalPrice: updatedTotalPrice,
         vatPrice: updatedVatPrice,
         grandTotal: updatedGrandTotal,
       };
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      return cart;
     },
 
-    removeAll: () => initialState,
+    clear: () => {
+      localStorage.setItem("cart", JSON.stringify(initialState));
+      return initialState;
+    },
   },
 });
 

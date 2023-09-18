@@ -4,11 +4,11 @@
   background-color: $dirty-white;
 
   @include breakpoint($tablet) {
-    padding: 120px 40px;
+    padding: 100px 40px 115px 40px;
   }
 
   @include breakpoint($mobile) {
-    padding: 65px 24px;
+    padding: 65px 24px 100px 24px;
   }
 }
 
@@ -16,11 +16,19 @@
   width: clamp(200px, 100%, 1110px);
   margin: 0 auto;
   color: $black;
+
+  @include breakpoint($tablet) {
+    width: clamp(200px, 100%, 689px);
+  }
 }
 
 .checkout__box {
   display: flex;
   gap: 30px;
+
+  @include breakpoint($tablet) {
+    flex-direction: column;
+  }
 }
 
 .form {
@@ -28,6 +36,10 @@
   padding: 54px 48px 48px 48px;
   border-radius: 8px;
   width: clamp(200px, 100%, 730px);
+
+  @include breakpoint($mobile) {
+    padding: 24px;
+  }
 }
 
 .form__title {
@@ -35,6 +47,11 @@
   font-weight: 700;
   letter-spacing: 1.14px;
   margin-bottom: 41px;
+
+  @include breakpoint($mobile) {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
 }
 
 .form__overline {
@@ -54,17 +71,40 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 15px;
   row-gap: 24px;
+
+  @include breakpoint($mobile) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .form__item {
   display: flex;
   flex-direction: column;
   gap: 9px;
+  position: relative;
+
+  &.invalid > .form__label {
+    color: $red;
+  }
+
+  &.invalid > .form__input {
+    border-color: $red;
+  }
 }
 
 .form__item--width {
   width: 100%;
   margin-bottom: 24px;
+}
+
+.form__item-error-msg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: $red;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.21px;
 }
 
 .form__label {
@@ -146,4 +186,8 @@
   border-radius: 8px;
   width: clamp(200px, 100%, 350px);
   height: fit-content;
+
+  @include breakpoint($tablet) {
+    width: 100%;
+  }
 }

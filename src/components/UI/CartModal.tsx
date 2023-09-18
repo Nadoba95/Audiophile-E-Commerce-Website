@@ -1,10 +1,18 @@
 import { createPortal } from "react-dom";
 import Backdrop from "./Backdrop";
 import Cart from "../Cart/Cart";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../../store/ui-slice";
 
 const CartLayout: React.FC = () => {
+  const dispatch = useDispatch();
+
+  function closeModalsHandler() {
+    dispatch(uiActions.closeCart());
+  }
+
   return (
-    <div className="cart-layout">
+    <div className="cart-layout" onClick={closeModalsHandler}>
       <Cart />
     </div>
   );

@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 import CartItem from "../../models/cartItem";
 import formatPrice from "../Helpers/formatPrice";
+import formatName from "../Helpers/formatItemName";
 
 const CartProduct: React.FC<{ item: CartItem }> = ({ item }) => {
   const dispatch = useDispatch();
@@ -16,14 +17,12 @@ const CartProduct: React.FC<{ item: CartItem }> = ({ item }) => {
     dispatch(cartActions.removeItem(newItem));
   }
 
-  const shorterName = item.name.replace("Headphones", "").replace("Earphones", "").replace("Speaker", "");
-
   return (
     <div className="cart__item">
       <div className="cart__item-body">
-        <img className="cart__item-img" src={item.img} alt={shorterName} />
+        <img className="cart__item-img" src={item.img} alt={formatName(item.name)} />
         <div className="cart__item-desc">
-          <p className="cart__item-name">{shorterName}</p>
+          <p className="cart__item-name">{formatName(item.name)}</p>
           <p className="cart__item-price">{`$ ${formatPrice(item.price)}`}</p>
         </div>
       </div>

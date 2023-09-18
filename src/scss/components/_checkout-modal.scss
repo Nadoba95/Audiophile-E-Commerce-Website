@@ -1,0 +1,127 @@
+.checkout-layout {
+  width: clamp(200px, 100%, 540px);
+  background-color: $white;
+  color: $black;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 31;
+  border-radius: 8px;
+  padding: 48px;
+
+  @include breakpoint($mobile) {
+    padding: 32px;
+    width: clamp(200px, 100%, 325px);
+  }
+}
+
+.checked-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background-color: $dark-orange;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 33px;
+
+  @include breakpoint($mobile) {
+    margin-bottom: 23px;
+  }
+}
+
+.checkout-modal__title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1.14px;
+  margin-bottom: 24px;
+  max-width: 285px;
+
+  @include breakpoint($mobile) {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+.checkout-modal__desc {
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.5;
+  margin-bottom: 33px;
+
+  @include breakpoint($mobile) {
+    margin-bottom: 24px;
+  }
+}
+
+.checkout-modal__box {
+  display: flex;
+  margin-bottom: 46px;
+
+  @include breakpoint($mobile) {
+    flex-direction: column;
+    margin-bottom: 23px;
+  }
+}
+
+.checkout-modal__item-list {
+  background-color: $dirty-white;
+  padding: 24px;
+  border-radius: 8px 0 0 8px;
+  width: 55%;
+
+  @include breakpoint($mobile) {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+.checkout-modal__price-box {
+  background-color: $black;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px 32px;
+  color: $white;
+  width: 45%;
+
+  @include breakpoint($mobile) {
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+    padding: 15px 24px;
+  }
+}
+
+.checkout-modal__price-title {
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.checkout-modal__price {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.checkout__more-items,
+.checkout__show-less {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.21px;
+  color: lighten($black, $amount: 50);
+  text-align: center;
+  border-top: 1px solid rgba($black, $alpha: 0.2);
+  padding-top: 12px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: $hover-transition;
+
+  &:hover {
+    color: $black;
+  }
+}

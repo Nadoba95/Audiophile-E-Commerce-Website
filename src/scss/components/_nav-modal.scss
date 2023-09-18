@@ -5,8 +5,8 @@
   width: 100%;
   background-color: $white;
   border-radius: 0 0 8px 8px;
-  z-index: 30;
-  animation: slide-down 0.3s ease-out forwards;
+  z-index: 25;
+  animation: navbar-slide 0.3s ease-out forwards;
 
   @include breakpoint($mobile) {
     top: 89px;
@@ -21,7 +21,7 @@
   }
 }
 
-@keyframes slide-down {
+@keyframes navbar-slide {
   from {
     opacity: 0;
     transform: translateY(-100px);

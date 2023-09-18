@@ -3,9 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 type UI = {
   navIsVisible: boolean;
   cartIsVisible: boolean;
+  checkoutModalIsVisible: boolean;
 };
 
-const initialUiState: UI = { navIsVisible: false, cartIsVisible: false };
+const initialUiState: UI = {
+  navIsVisible: false,
+  cartIsVisible: false,
+  checkoutModalIsVisible: false,
+};
 
 const uiSlice = createSlice({
   name: "ui",
@@ -27,6 +32,14 @@ const uiSlice = createSlice({
 
     closeCart(state) {
       state.cartIsVisible = false;
+    },
+
+    openCheckoutModal(state) {
+      state.checkoutModalIsVisible = true;
+    },
+
+    closeCheckoutModal(state) {
+      state.checkoutModalIsVisible = false;
     },
   },
 });

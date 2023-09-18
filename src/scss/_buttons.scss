@@ -71,7 +71,7 @@
     top: 33px;
   }
 
-  @include breakpoint($tablet) {
+  @include breakpoint($mobile) {
     top: 16px;
   }
 }
